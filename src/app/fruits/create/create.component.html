@@ -13,6 +13,23 @@
         <label for="txtQuantity" class="form-label">Quantity</label>
         <input type="number" name="quantity" [(ngModel)] = "fruitForm.quantity" class="form-control" id="txtQuantity" />
       </div>
+
+      <div class="mb-3">
+      <label for="txtQuantity" class="form-label">Category</label>
+
+     <!--  <select ng-model="fruitsForm.category.id" class="form-select" aria-label="Default select example">
+        
+        <option ng-repeat="category in allCategories" value="category.id">{{ category.name }}</option> -->
+        <select [(ngModel)]="fruitForm.category.id" class="form-select" name="category">
+            <option value="Select a Category" selected>Select a Category</option>
+            <option *ngFor="let option of allCategories" [value]="option.id">
+                {{ option.name }}
+            </option>
+        </select>
+
+      <!-- </select> -->
+      </div>
+
       <button type="button" (click)="create()" class="btn btn-primary">Create</button>
     </form>
   </div>

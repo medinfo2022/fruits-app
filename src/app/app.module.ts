@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FruitsModule } from './fruits/fruits.module';
 import { HttpClientModule } from '@angular/common/http';
+import { CategoriesModule } from './categories/categories.module';
 
 
 
@@ -16,7 +17,8 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     AppRoutingModule,
     FruitsModule,
-    HttpClientModule
+    HttpClientModule,
+    CategoriesModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
